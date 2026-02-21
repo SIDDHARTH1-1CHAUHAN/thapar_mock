@@ -4,7 +4,16 @@
       "Bash(copy \"C:\\\\Users\\\\Dell\\\\.claude\\\\plans\\\\synchronous-swimming-kurzweil.md\" \"D:\\\\thapar-hackathon\\\\TARIFF_TRADE_AI_PRD.md\")",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(move \"HACKATHON_MASTER_PLAN.md\" \"01-planning\"\" && move \"GIT_PHASE_WORKFLOW.md\" \"01-planning\"\")",
+      "Bash(move \"HACKATHON_WINNING_STRATEGY.md\" \"01-planning\"\" && move \"GUARANTEED_WIN_ADDITIONS.md\" \"01-planning\"\")",
+      "Bash(move \"HACKATHON_FEATURES_FLOWCHARTS.md\" \"01-planning\"\")",
+      "Bash(move HACKATHON_MASTER_PLAN.md 01-planning)",
+      "Bash(dir /s /b \"D:\\\\thapar-hackathon\")",
+      "Bash(findstr:*)"
     ]
   }
 }

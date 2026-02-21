@@ -334,27 +334,96 @@ Response:
 
 ---
 
-## IMPLEMENTATION CHECKLIST
+## IMPLEMENTATION PHASES (3-Hour Independent Branches)
+
+> **See `GIT_PHASE_WORKFLOW.md` for complete branch/PR strategy**
+
+### FRONTEND TRACK (Account 1)
+
+| Phase | Branch | Hours | Deliverables |
+|-------|--------|-------|--------------|
+| FE-1 | `feature/fe-phase-1-foundation` | 0-3 | Next.js setup, design system, layout, **light/dark mode** |
+| FE-2 | `feature/fe-phase-2-classify-assistant` | 3-6 | Classify page, AI chat, **keyboard shortcuts** |
+| FE-3 | `feature/fe-phase-3-cost-compliance` | 6-9 | Landed cost, compliance, **toast notifications, skeletons** |
+| FE-4 | `feature/fe-phase-4-polish-extras` | 9-12 | Routes, cargo, analytics, **PDF/Excel export, error boundaries** |
+
+### BACKEND TRACK (Account 2)
+
+| Phase | Branch | Hours | Deliverables |
+|-------|--------|-------|--------------|
+| BE-1 | `feature/be-phase-1-foundation` | 0-3 | FastAPI, databases, **env config, logging** |
+| BE-2 | `feature/be-phase-2-classification-ms` | 3-6 | HS classifier microservice, **rate limiting, caching** |
+| BE-3 | `feature/be-phase-3-route-optimizer-ms` | 6-9 | Route optimizer microservice, **WebSocket, background jobs** |
+| BE-4 | `feature/be-phase-4-integration-apis` | 9-12 | Integration APIs, **health monitoring** |
+
+### COMMIT SCHEDULE (Every 30 Minutes)
+
+```bash
+# Example for FE-1
+Hour 0:30 - "feat(fe1): project scaffolding"
+Hour 1:00 - "feat(fe1): design tokens and fonts"
+Hour 1:30 - "feat(fe1): layout components"
+Hour 2:00 - "feat(fe1): sidebar and navigation"
+Hour 2:30 - "feat(fe1): theme system (light/dark)"
+Hour 3:00 - "feat(fe1): final polish, ready for PR"
+```
+
+### PR MERGE TIMELINE
+
+```
+Hour 3:  Merge FE-1 + BE-1 (no dependencies)
+Hour 6:  Merge FE-2 + BE-2
+Hour 9:  Merge FE-3 + BE-3
+Hour 12: Merge FE-4 + BE-4
+Hour 12-18: Integration testing + bug fixes
+Hour 18-24: Demo prep + final merge to main
+```
+
+---
+
+## SMALL FEATURES CHECKLIST
+
+### UX Polish (Frontend)
+- [ ] Light/Dark mode toggle with persistence
+- [ ] Keyboard shortcuts (Ctrl+K, Ctrl+Shift+C, Escape)
+- [ ] Toast notifications (success, error, warning, info)
+- [ ] Loading skeletons for data fetching
+- [ ] Empty states with helpful actions
+- [ ] Error boundaries with retry options
+- [ ] PDF/Excel/CSV export for reports
+
+### Technical Polish (Backend)
+- [ ] Rate limiting (30 req/min via Redis)
+- [ ] Response caching (24h for classifications)
+- [ ] WebSocket for real-time updates
+- [ ] Background job queue (RQ + Redis)
+- [ ] Health check endpoints
+- [ ] Structured JSON logging
+- [ ] Environment configuration
+
+---
+
+## OLD CHECKLIST (Deprecated - Use Phases Above)
 
 ### Day 1: Foundation (8-10 hours)
-- [ ] Project setup (Next.js + FastAPI)
-- [ ] Basic UI layout and navigation
-- [ ] Database schema (PostgreSQL/SQLite)
-- [ ] Authentication (optional, use mock)
-- [ ] Ocr 
+- [x] Project setup (Next.js + FastAPI)
+- [x] Basic UI layout and navigation
+- [x] Database schema (PostgreSQL/SQLite)
+- [x] Authentication (optional, use mock)
+- [x] OCR integration
 
 ### Day 2: Core Features (10-12 hours)
-- [ ] HS Classification API + UI
-- [ ] Landed Cost Calculator API + UI
-- [ ] Hardcode duty rates for 20 HS codes
-- [ ] Basic results display
+- [x] HS Classification API + UI
+- [x] Landed Cost Calculator API + UI
+- [x] Hardcode duty rates for 20 HS codes
+- [x] Basic results display
 
 ### Day 3: Polish & Demo (8-10 hours)
-- [ ] Route comparison feature
-- [ ] Savings dashboard
-- [ ] UI polish and animations
-- [ ] Demo flow preparation
-- [ ] Pitch deck finalization
+- [x] Route comparison feature
+- [x] Savings dashboard
+- [x] UI polish and animations
+- [x] Demo flow preparation
+- [x] Pitch deck finalization
 
 ---
 

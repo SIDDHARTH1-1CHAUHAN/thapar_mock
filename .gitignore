@@ -1,0 +1,20 @@
+# Ignore old frontend folder (will be built fresh during hackathon)
+frontend/
+
+# Node modules (if any)
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+nul
+
+# IDE
+.vscode/
+.idea/
